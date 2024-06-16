@@ -67,7 +67,7 @@ const ExecutiveInfo = ({ profileData }) => {
       showSuccess("Executive added successfully")
     }
     catch (e) {
-      
+      console.log(e);
       showError("Failed to add executive,try again")
     }
     finally {

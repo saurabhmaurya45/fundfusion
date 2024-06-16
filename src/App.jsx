@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useAddress, useMetamask, useContract } from "@thirdweb-dev/react";
+import { useAddress, useMetamask, useContract, Account } from "@thirdweb-dev/react";
 import { Outlet, useLocation, useNavigate } from "react-router-dom";
 import { Header, Sidebar } from "./Components";
 import { ToastContainer } from 'react-toastify';
@@ -58,7 +58,7 @@ function App() {
     showError("Your account is inactive")
   }
 
-  
+  console.log(address);
   return (
     <div className="app bg-black min-h-[100vh] text-white">
       <Header />

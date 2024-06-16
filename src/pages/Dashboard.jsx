@@ -18,7 +18,7 @@ const Dashboard = () => {
       setIsLoading(false)
     }
     catch(e){
-      
+      console.log(e);
       showError("Failed to fetch statistics")
     }
     finally{

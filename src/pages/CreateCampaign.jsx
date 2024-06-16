@@ -98,7 +98,7 @@ const CreateCampaign = () => {
             showSuccess("Project created Sucessfully");
         }
         catch (e) {
-            
+            console.log(e);
             showError("Failed to create project, try again")
         }
         finally {

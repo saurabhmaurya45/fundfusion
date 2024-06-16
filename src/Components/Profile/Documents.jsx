@@ -60,7 +60,7 @@ const Documents = ({ profileData }) => {
       showSuccess("File Uploaded successfully")
     }
     catch (e) {
-      
+      console.log(e);
       showError("Failed to upload file,try again")
     }
     finally {

@@ -98,6 +98,7 @@ function RegistrationPage() {
             showSuccess("Registration successful")
         }
         catch (e) {
+            console.log(e);
             showError("Failed to register, retry")
         }
         finally {

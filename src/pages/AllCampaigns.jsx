@@ -26,7 +26,7 @@ const allCampaigns = () => {
       setIsLoading(false)
     }
     catch (e) {
-      
+      console.log(e);
       showError("Failed to fetch data, try again")
     }
     finally {

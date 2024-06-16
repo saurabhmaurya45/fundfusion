@@ -75,7 +75,7 @@ function LoginPage() {
             showSuccess("Login Successfully")
         }
         catch (e) {
-            
+            console.log(e);
             showError("Failed to Login, retry")
         }
         finally {

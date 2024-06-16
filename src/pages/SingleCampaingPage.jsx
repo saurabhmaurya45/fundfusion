@@ -57,7 +57,7 @@ export default function CampaignDetails() {
             setIsSubmitting(false)
             showSuccess("Transaction successful")
         } catch (e) {
-            
+            console.log(e);
             if(e.reason){
                 showError(e.reason)
             }

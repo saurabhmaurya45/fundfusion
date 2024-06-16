@@ -77,7 +77,7 @@ const CompanyInfo = ({ profileData }) => {
       showSuccess("Profile updated successfully")
     }
     catch (e) {
-      
+      console.log(e);
       showError("Failed to update profile,try again")
     }
     finally {
