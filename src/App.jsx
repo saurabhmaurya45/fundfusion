@@ -58,6 +58,8 @@ function App() {
     showError("Your account is inactive")
   }
 
+  console.log(import.meta.env.VITE_CONTRACT_ADDRESS_CROWDFINDING);
+  console.log(import.meta.env.VITE_CONTRACT_ADDRESS_PROFILE);
   console.log(address,contract,profileContract);
   return (
     <div className="app bg-black min-h-[100vh] text-white">
