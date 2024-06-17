@@ -1,18 +1,18 @@
-import { useEffect, useState } from "react";
-import { useAddress, useMetamask, useContract, Account } from "@thirdweb-dev/react";
-import { Outlet, useLocation, useNavigate } from "react-router-dom";
+import { useEffect } from "react";
+import { useAddress, useMetamask, useContract } from "@thirdweb-dev/react";
+import { Outlet, useLocation } from "react-router-dom";
 import { Header, Sidebar } from "./Components";
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { useDispatch, useSelector } from "react-redux";
 import { getCategory } from "./Redux/Features/Category/CategoryService";
 import { setContract, setAddress, setProfileContract } from './Redux/Features/Contract/ContractSlice';
-import { addProfileData,addYourCampaignData,addStatisticsData,resetProfile } from "./Redux/Features/Authenticate/UserProfileSlice";
+import { addProfileData,addYourCampaignData,addStatisticsData } from "./Redux/Features/Authenticate/UserProfileSlice";
 import { showError } from "./utils";
 
 
 function App() {
-  const navigate = useNavigate()
+  // const navigate = useNavigate()
   const { contract, isLoading: IsContractLoading } = useContract(import.meta.env.VITE_CONTRACT_ADDRESS_CROWDFINDING);
   const { contract: profileContract, isLoading: isProfileContractLoading } = useContract(import.meta.env.VITE_CONTRACT_ADDRESS_PROFILE);
   const address = useAddress()
@@ -21,20 +21,20 @@ function App() {
   const userDataFromSession = JSON.parse(sessionStorage.getItem("userProfile"))
   const { isAccountActive } = useSelector(state => state.userProfile)
   const location = useLocation()
-  const [initialAddress, setInitialAddress] = useState(address);
+  // const [initialAddress, setInitialAddress] = useState(address);
 
   
 
-  useEffect(() => {
-    if (address && initialAddress && address !== initialAddress) {
-      // Address has changed, log out the user
-      dispatch(resetProfile());
-      sessionStorage.removeItem("userProfile");
-      navigate('/login');
-    } else {
-      setInitialAddress(address);
-    }
-  }, [address]);
+  // useEffect(() => {
+  //   if (address && initialAddress && address !== initialAddress) {
+  //     // Address has changed, log out the user
+  //     dispatch(resetProfile());
+  //     sessionStorage.removeItem("userProfile");
+  //     navigate('/login');
+  //   } else {
+  //     setInitialAddress(address);
+  //   }
+  // }, [address]);
 
   useEffect(() => {
     connectWithMetamask().then(async (res) => {
@@ -58,7 +58,7 @@ function App() {
     showError("Your account is inactive")
   }
 
-  console.log(address);
+  console.log(address,contract,profileContract);
   return (
     <div className="app bg-black min-h-[100vh] text-white">
       <Header />
