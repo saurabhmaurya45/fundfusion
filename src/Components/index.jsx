@@ -17,6 +17,17 @@ export {default as ProfileCompanyInfo} from "./Profile/CompanyInfo"
 export {default as ProfileExecutiveInfo} from "./Profile/ExecutiveInfo"
 export {default as ProfileDocuments} from "./Profile/Documents"
 export {default as ProfileDetailTab} from "./Profile/ProfileDetailTab"
-
+export {
+    Navbar,
+    Billing,
+    CardDeal,
+    Business,
+    Clients,
+    CTA,
+    Stats,
+    Footer,
+    Testimonials,
+    Hero,
+  } from './Home'
 // profile section ends here
 

@@ -20,7 +20,7 @@ function LoginPage() {
     const [isSubmitting, setIsSubmitting] = useState(false)
 
     const handleRedirectToOrBack = () => {
-        navigate(location.state?.from ?? '/', { replace: true })
+        navigate(location.state?.from ?? '/main', { replace: true })
     }
     const handleFormInput = (e) => {
         setUserDetails({
@@ -92,7 +92,7 @@ function LoginPage() {
                             <form onKeyUp={handleFormInput} onSubmit={handleFormSubmit}>
                                 <div className="mb-12">
                                     <h3 className="text-3xl font-extrabold">Log in</h3>
-                                    <p className="text-sm mt-4 ">Don't have an account <Link to="/register" className="text-blue-600 font-semibold hover:underline ml-1 whitespace-nowrap">Register here</Link></p>
+                                    <p className="text-sm mt-4 ">Don't have an account <Link to="/main/register" className="text-blue-600 font-semibold hover:underline ml-1 whitespace-nowrap">Register here</Link></p>
                                 </div>
                                 <div>
                                     <label className="text-xs block mb-2">Email</label>

@@ -7,7 +7,7 @@ const PublicRoute = ({ element }) => {
     const location = useLocation();
 
     if (profileData && profileData.owner) {
-        const from = location.state?.from?.pathname || "/";
+        const from = location.state?.from?.pathname || "/main/";
         return <Navigate to={from} />;
     }
 

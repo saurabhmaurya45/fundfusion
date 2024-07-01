@@ -21,7 +21,7 @@ const sidebarData = [
     icon: dashboard,
     name: "Dashboard",
     status: true,
-    url: "/",
+    url: "/main",
     show: true
   },
   {
@@ -29,7 +29,7 @@ const sidebarData = [
     icon: createCampaign,
     name: "All Projects",
     status: false,
-    url: "/all-campaign",
+    url: "/main/all-campaign",
     show: true
   },
   {
@@ -37,7 +37,7 @@ const sidebarData = [
     icon: createCampaign,
     name: "My Projects",
     status: false,
-    url: "/your-campaign",
+    url: "/main/your-campaign",
     show: true
   },
   {
@@ -45,7 +45,7 @@ const sidebarData = [
     icon: profile,
     name: "Profile",
     status: false,
-    url: "/profile",
+    url: "/main/profile",
     show: true
   },
 

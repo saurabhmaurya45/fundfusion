@@ -27,8 +27,8 @@ const Filter = ({ setFilterCriteria,filterCriteria,setShowFilter }) => {
 
 
     return (
-        <div className=" w-full z-10" onChange={filterHandler}>
-            <div className="mt-7 box rounded-xl border border-gray-300 bg-[#1C1C24] p-6 w-full md:max-w-sm">
+        <div className="filter w-full z-10" onChange={filterHandler} >
+            <div className=" box rounded-xl border border-gray-300 bg-[#1C1C24] p-6 w-full md:max-w-sm">
                 <div className="flex items-center justify-between w-full pb-3 border-b border-gray-200 mb-2">
                     <p className="font-medium text-base leading-7 text-white ">Filter</p>
                     <p onClick={resetHandler}

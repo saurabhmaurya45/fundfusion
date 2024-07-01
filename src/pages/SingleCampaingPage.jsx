@@ -34,7 +34,6 @@ export default function CampaignDetails() {
             setIsLoading(false)
         }
         catch (e) {
-            
             showError("Failed to fetch data, try again")
         }
         finally {

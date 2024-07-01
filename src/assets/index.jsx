@@ -1,4 +1,4 @@
-export {default as logo } from './logo1-removebg-preview.png'
+export {default as logo } from './logo.png'
 
 import createCampaign from './create-campaign.svg';
 import dashboard from './dashboard.svg';
@@ -31,3 +31,30 @@ export {
   loader,
   thirdweb,
 };
+
+export {
+  airbnb,
+  bill,
+  binance,
+  card,
+  coinbase,
+  dropbox,
+  quotes,
+  robot,
+  send,
+  shield,
+  star,
+  menu1,
+  close,
+  google,
+  apple,
+  arrowUp,
+  discount,
+  facebook,
+  instagram,
+  linkedin,
+  twitter,
+  people01,
+  people02,
+  people03,
+} from './home';

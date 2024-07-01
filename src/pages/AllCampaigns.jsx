@@ -34,7 +34,7 @@ const allCampaigns = () => {
     }
   }
   function handleNavigate(campaign) {
-    navigate(`/campaign-details/${campaign.pId}`, { state: campaign.pId })
+    navigate(`/main/campaign-details/${campaign.pId}`, { state: campaign.pId })
   }
 
   useEffect(() => {
@@ -50,7 +50,7 @@ const allCampaigns = () => {
           <div className='flex justify-between'>
             <h1 className="font-epilogue font-semibold text-[18px] text-white text-left">All Projects ({campaignList.length > 0 ? campaignList.length : 0})</h1>
             <button className='filter p-2 fixed right-7 bg-[#1C1C24] text-white rounded-full font-bold text-3xl' onClick={() => (setShowFilter(!showFilter))}><CiFilter /></button>
-            {showFilter && <div className='fixed w-[300px] right-10  top-[7rem]  z-10'>
+            {showFilter && <div className='fixed w-[300px] right-10  top-[8.5rem]  z-10'>
               <Filter setFilterCriteria={setFilterCriteria} filterCriteria={filterCriteria} setShowFilter={setShowFilter}  />
             </div>}
           </div>

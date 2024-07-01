@@ -27,7 +27,7 @@ function RegistrationPage() {
     const [isSubmitting, setIsSubmitting] = useState(false);
 
     const handleRedirectToOrBack = () => {
-        navigate(location.state?.from ?? '/', { replace: true })
+        navigate(location.state?.from ?? '/main', { replace: true })
     }
 
     const handleFormInput = (e) => {
@@ -125,7 +125,7 @@ function RegistrationPage() {
                                     <p className="text-sm mt-4 ">
                                         Have an account{' '}
                                         <Link
-                                            to="/login"
+                                            to="/main/login"
                                             className="text-blue-600 font-semibold hover:underline ml-1 whitespace-nowrap"
                                         >
                                             Login{' '}
