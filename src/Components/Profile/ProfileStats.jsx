@@ -13,7 +13,7 @@ const ProfileStats = () => {
                 <div className='w-1/3 cursor-pointer bg-white text-[#4b4a4a] hover:text-white h-20 rounded-lg p-2 px-4 flex items-center justify-between hover:bg-gradient-to-br hover:from-purple-400 hover:via-blue-400 hover:to-blue-500 shadow-lg duration-300 hover:shadow-2xl group'>
                     <div>
                         <h3 className=''>Total Projects</h3>
-                        <h1 className='text-4xl font-bold'>{statistics.totalCampaigns}</h1>
+                        <h1 className='text-4xl font-bold'>{statistics?.totalCampaigns ?? 0}</h1>
                     </div>
                     <div className='bg-gray-300 bg-opacity-30 w-14 h-14 rounded-xl flex justify-center items-center'>
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 group-hover:text-gray-50" viewBox="0 0 20 20"
@@ -28,7 +28,7 @@ const ProfileStats = () => {
                 <div className='w-1/3 cursor-pointer bg-white text-[#4b4a4a] hover:text-white h-20 rounded-lg p-2 px-4 flex items-center justify-between hover:bg-gradient-to-br hover:from-purple-400 hover:via-green-400 hover:to-green-500 shadow-lg duration-300 hover:shadow-2xl group'>
                     <div>
                         <h3 className=''>Ongoing Projects</h3>
-                        <h1 className='text-4xl font-bold'>{statistics.onGoingCampaigns}</h1>
+                        <h1 className='text-4xl font-bold'>{statistics?.onGoingCampaigns ?? 0}</h1>
                     </div>
                     <div className='text-2xl bg-gray-300 bg-opacity-30 w-14 h-14 rounded-xl flex justify-center items-center'>
                         <FaRegCalendarCheck />
@@ -37,7 +37,7 @@ const ProfileStats = () => {
                 <div className='w-1/3 cursor-pointer bg-white text-[#4b4a4a] hover:text-white h-20 rounded-lg p-2 px-4 flex items-center justify-between hover:bg-gradient-to-br hover:from-purple-400 hover:via-red-400 hover:to-red-500 shadow-lg duration-300 hover:shadow-2xl group'>
                     <div>
                         <h3 className=''>Completed Projects</h3>
-                        <h1 className='text-4xl font-bold'>{statistics.completedCampaigns}</h1>
+                        <h1 className='text-4xl font-bold'>{statistics?.completedCampaigns ?? 0}</h1>
                     </div>
                     <div className='text-3xl bg-gray-300 bg-opacity-30 w-14 h-14 rounded-xl flex justify-center items-center'>
                         <LiaGlobeAfricaSolid />

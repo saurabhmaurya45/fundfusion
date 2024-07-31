@@ -2,6 +2,7 @@ import { ConnectWallet, useWallet } from "@thirdweb-dev/react"
 import { logo } from "../assets"
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
+import { thirdweb } from "../assets";
 
 const Header = () => {
     const wallet = useWallet();
@@ -24,7 +25,7 @@ const Header = () => {
                         <img src={profileData?.personalInfo?.profilePicture !='' ? profileData?.personalInfo?.profilePicture : thirdweb} className='w-12 h-12 rounded-full' alt='profile' />
                     </Link>
                     :
-                    <Link to = "/login" className="p-4 px-8 text-white bg-[#1C1C24] rounded-lg text-lg font-semibold">Login</Link>
+                    <Link to = "/main/login" className="p-4 px-8 text-white bg-[#1C1C24] rounded-lg text-lg font-semibold">Login</Link>
                 }
             </div>
         </header>
